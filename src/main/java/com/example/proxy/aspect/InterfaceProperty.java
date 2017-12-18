@@ -16,5 +16,6 @@ import java.lang.annotation.Target;
 @Inherited//该注解表明子类是有继承了父类的注解
 public @interface InterfaceProperty {
     int outTime() default 400;
+
     boolean isSendEmail() default true;
 }

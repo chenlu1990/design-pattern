@@ -13,10 +13,10 @@ public class Singleton3 {
     //禁止指令重排优化
     //private static volatile Singleton3 instance = null;
 
-    public static Singleton3 getInstance(){
-        if(instance == null){
-            synchronized (Singleton3.class){
-                if(instance == null){
+    public static Singleton3 getInstance() {
+        if (instance == null) {
+            synchronized (Singleton3.class) {
+                if (instance == null) {
                     instance = new Singleton3();
                 }
             }

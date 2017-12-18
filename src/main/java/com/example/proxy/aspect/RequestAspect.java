@@ -37,7 +37,7 @@ public class RequestAspect {
         } catch (Throwable throwable) {
             throwable.printStackTrace();
         }
-        System.out.println("--obj--:"+obj);
+        System.out.println("--obj--:" + obj);
         return obj;
     }
 

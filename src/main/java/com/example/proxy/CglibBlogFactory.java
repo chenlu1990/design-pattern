@@ -18,11 +18,11 @@ public class CglibBlogFactory implements MethodInterceptor {
 
     private Object target;
 
-    public CglibBlogFactory(IBlogService target){
+    public CglibBlogFactory(IBlogService target) {
         this.target = target;
     }
 
-    public Object getProxyInstance(){
+    public Object getProxyInstance() {
         //1、工具类
         Enhancer en = new Enhancer();
         //2、设置父类
@@ -37,7 +37,7 @@ public class CglibBlogFactory implements MethodInterceptor {
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("start writing...");
         //执行目标对象方法
-        Object returnValue = method.invoke(target,objects);
+        Object returnValue = method.invoke(target, objects);
         System.out.println("end writing...");
         return returnValue;
     }

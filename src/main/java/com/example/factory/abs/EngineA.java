@@ -5,7 +5,7 @@ package com.example.factory.abs;
  */
 public class EngineA implements Engine {
 
-    public EngineA(){
+    public EngineA() {
         System.out.println("制造-->EngineA");
     }
 }

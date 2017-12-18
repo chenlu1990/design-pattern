@@ -6,9 +6,10 @@ package com.example.proxy;
 public class BlogStaticProxy implements IBlogService {
     private IBlogService blogService;
 
-    public BlogStaticProxy(IBlogService blogService){
+    public BlogStaticProxy(IBlogService blogService) {
         this.blogService = blogService;
     }
+
     @Override
     public void writeBLog() {
         System.out.println("start writing...");

@@ -19,8 +19,8 @@ public class SimpleFactory {
     private final static String SQUARE = "SQUARE";
 
 
-    public static Shape getShape(String type){
-        switch(type){
+    public static Shape getShape(String type) {
+        switch (type) {
             case CIRCLE:
                 return new Circle();
             case SQUARE:
@@ -29,8 +29,9 @@ public class SimpleFactory {
                 throw new NullPointerException("未描述任何图形");
         }
     }
+
     //使用反射机制可以解决每次增加一个产品，都需要创建一个对象的逻辑的缺点
-    public static Object getShape(Class<?extends Shape> clazz){
+    public static Object getShape(Class<? extends Shape> clazz) {
         Object object = null;
         try {
             object = Class.forName(clazz.getName()).newInstance();
@@ -47,7 +48,7 @@ public class SimpleFactory {
     public static void main(String[] args) {
         Shape circle = SimpleFactory.getShape("CIRCLE");
         circle.draw();
-        Square square = (Square)SimpleFactory.getShape(Square.class);
+        Square square = (Square) SimpleFactory.getShape(Square.class);
         square.draw();
     }
 }

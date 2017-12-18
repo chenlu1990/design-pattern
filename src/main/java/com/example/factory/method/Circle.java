@@ -5,7 +5,7 @@ package com.example.factory.method;
  */
 public class Circle implements Shape {
 
-    public Circle(){
+    public Circle() {
         System.out.println("创建圆形模型");
     }
 

@@ -19,10 +19,9 @@ public class SingletonReflectAttack {
         Singleton singleton1 = Singleton.getInstance();
         System.out.println(singleton == singleton1);
     }
-    public static void modifiedByAttack()
-    {
-        try
-        {
+
+    public static void modifiedByAttack() {
+        try {
             Class<SingletonNotAttackByReflect> classType = SingletonNotAttackByReflect.class;
             Constructor<SingletonNotAttackByReflect> constructor = classType.getDeclaredConstructor(null);
             constructor.setAccessible(true);
@@ -30,9 +29,7 @@ public class SingletonReflectAttack {
             SingletonNotAttackByReflect singleton2 = SingletonNotAttackByReflect.getInstance();
 
             System.out.println(singleton == singleton2);
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

@@ -5,7 +5,7 @@ package com.example.factory.method;
  */
 public class Square implements Shape {
 
-    public Square(){
+    public Square() {
         System.out.println("创建方形模型");
     }
 
